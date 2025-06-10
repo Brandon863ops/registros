@@ -1,6 +1,6 @@
 <?php
 include("conexion.php");
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM estudiantes";
 $respuesta = mysqli_query($conn, $sql);
 ?>
 
@@ -35,8 +35,8 @@ $respuesta = mysqli_query($conn, $sql);
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Teléfono</th>
+                        <th scope="col">Grado</th>
+                        <th scope="col">Carrera</th>
                         <th scope="col" style="width: 160px;">Acciones</th>
                     </tr>
                 </thead>
@@ -48,8 +48,8 @@ $respuesta = mysqli_query($conn, $sql);
                     <tr>
                         <td><?php echo $i++; ?></td>
                         <td><?php echo $row['nombre']; ?></td>
-                        <td><?php echo $row['apellido']; ?></td>
-                        <td><?php echo $row['telefono']; ?></td>
+                        <td><?php echo $row['grado']; ?></td>
+                        <td><?php echo $row['carrera']; ?></td>
                         <td class="text-center">
                             <a href="delete.php?id=<?php echo $row['id']; ?>" title="Borrar Registro">
                                 <button type="button" class="btn btn-outline-danger btn-xs">

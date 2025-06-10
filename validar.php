@@ -15,6 +15,7 @@ if (isset($usuarios[$usuario]) && $usuarios[$usuario] === $contrasena) {
     header("Location: registrar.php");
     exit;
 } else {
-    echo("El segundo valor no puede ser cero");
+    header("Location: login.php?error=1");
+    exit;
 }
 ?>

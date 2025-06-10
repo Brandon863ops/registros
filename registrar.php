@@ -1,6 +1,6 @@
 <?php
 include("conexion.php");
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM estudiantes";
 $respuesta = mysqli_query($conn , $sql); 
 ?>
 
@@ -52,20 +52,17 @@ $respuesta = mysqli_query($conn , $sql);
                             <input type="text" class="form-control" name="apellido" required>
                         </div>
                         <div class="col-md-6">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" name="fechanaci" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Direccion</label>
+                            <input type="text" class="form-control" name="direccion" required>
+                        </div>
+                        <div class="col-md-6">
                             <label class="form-label">Teléfono</label>
                             <input type="number" class="form-control" name="telefono" required>
                         </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Tipo</label>
-                            <select class="form-select" name="tipo" required>
-                                <option value="" disabled selected>Seleccionar</option>
-                                <option value="Administrador">Administrador</option>
-                                <option value="Alumno">Alumno</option>
-                                <option value="Docente">Docente</option>
-                                <option value="Dependente">Dependente</option>
-                            </select>
-                        </div>
-
                         <div class="col-md-6">
                             <label class="form-label">Correo</label>
                             <input type="email" class="form-control" name="correo" required>
@@ -79,13 +76,14 @@ $respuesta = mysqli_query($conn , $sql);
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label">Código de Barra</label>
-                            <input type="text" class="form-control" name="codigobarra" required>
+                            <label class="form-label">Grado</label>
+                            <input type="text" class="form-control" name="grado" required>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label">Nickname</label>
-                            <input type="text" class="form-control" name="nickname" required>
+                            <label class="form-label">Carrera</label>
+                            <input type="text" class="form-control" name="carrera" required>
                         </div>
+                        
                         <div class="col-md-6 password-wrapper">
                             <label class="form-label">Contraseña</label>
                             <input type="password" class="form-control" id="password" name="contraseña" required>

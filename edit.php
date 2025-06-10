@@ -1,7 +1,7 @@
 <?php 
 include("conexion.php");
 $id = $_GET['id'];
-$sql = "SELECT * FROM usuarios WHERE id = '$id'";
+$sql = "SELECT * FROM estudiantes WHERE id = '$id'";
 $r = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($r);
 ?>
@@ -48,28 +48,18 @@ $row = mysqli_fetch_array($r);
                         <label class="form-label">Apellido</label>
                         <input type="text" class="form-control" name="apellido" id="apellido" value="<?= $row['apellido'] ?>" required>
                     </div>
-
-                    <!-- CAMPO DE MODIFICACIÓN GENERADO AUTOMÁTICAMENTE -->
                     <div class="col-md-6">
-                        <label class="form-label">Modificación</label>
-                        <input type="text" class="form-control" name="modificacion" id="modificacion" readonly>
+                        <label class="form-label">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" name="fechanaci" id="fechanaci" value="<?= $row['fechanaci'] ?>" required>
                     </div>
-
+                    <div class="col-md-6">
+                        <label class="form-label">Direccion</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" value="<?= $row['direccion'] ?>" required>
+                    </div>
                     <div class="col-md-6">
                         <label class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" name="telefono" value="<?= $row['telefono'] ?>" required>
+                        <input type="number" class="form-control" name="telefono" value="<?= $row['telefono'] ?>" required>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Tipo</label>
-                        <select class="form-select" name="tipo" required>
-                            <option value="" disabled <?= empty($row['tipo']) ? 'selected' : '' ?>>Seleccionar</option>
-                            <option value="Administrador" <?= $row['tipo'] == 'Administrador' ? 'selected' : '' ?>>Administrador</option>
-                            <option value="Alumno" <?= $row['tipo'] == 'Alumno' ? 'selected' : '' ?>>Alumno</option>
-                            <option value="Docente" <?= $row['tipo'] == 'Docente' ? 'selected' : '' ?>>Docente</option>
-                            <option value="Dependente" <?= $row['tipo'] == 'Dependente' ? 'selected' : '' ?>>Dependente</option>
-                        </select>
-                    </div>
-
                     <div class="col-md-6">
                         <label class="form-label">Correo</label>
                         <input type="email" class="form-control" name="correo" value="<?= $row['correo'] ?>" required>
@@ -80,20 +70,15 @@ $row = mysqli_fetch_array($r);
                             <option value="Activo" <?= $row['estado'] == 'Activo' ? 'selected' : '' ?>>Activo</option>
                             <option value="Inactivo" <?= $row['estado'] == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
                         </select>
+                    </div>               
+                    <div class="col-md-6">
+                        <label class="form-label">Grado</label>
+                        <input type="text" class="form-control" name="grado" id="grado" value="<?= $row['grado'] ?>" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Código de Barra</label>
-                        <input type="text" class="form-control" name="codigobarra" value="<?= $row['codigobarra'] ?>" required>
+                        <label class="form-label">Carrera</label>
+                        <input type="text" class="form-control" name="carrera" id="carrera" value="<?= $row['carrera'] ?>" required>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Nickname</label>
-                        <input type="text" class="form-control" name="nickname" value="<?= $row['nickname'] ?>" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Contraseña</label>
-                        <input type="text" class="form-control" name="contraseña" value="<?= $row['contraseña'] ?>" required>
-                    </div>
-
                     <div class="col-12 text-center">
                         <button class="btn btn-success" type="submit">
                             <i class="fas fa-save me-2"></i>Actualizar
