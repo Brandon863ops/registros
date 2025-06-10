@@ -1,0 +1,105 @@
+body {
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff; /* fondo blanco */
+        }
+
+        .sidebar {
+            width: 230px;
+            background-color: #212529;
+            padding: 30px 20px;
+            color: #fff;
+        }
+
+        .sidebar h4 {
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #343a40;
+            padding-left: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 40px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .btn-light {
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .masthead-avatar {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                padding: 15px 10px;
+            }
+
+            .main-content {
+                padding: 20px;
+                min-height: auto;
+                align-items: stretch;
+                justify-content: stretch;
+            }
+
+            .image-column {
+                display: none;
+            }
+        }
