@@ -46,34 +46,35 @@ $row = mysqli_fetch_array($r);
                         <input type="text" class="form-control" value="<?= $row['apellido'] ?>" disabled>
                     </div>
                     <div class="col-md-6">
+                        <label class="form-label">Fecha de nacimiento</label>
+                        <input type="text" class="form-control" value="<?= $row['fechanaci'] ?>" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Direccion</label>
+                        <input type="text" class="form-control" value="<?= $row['direccion'] ?>" disabled>
+                    </div>
+                    <div class="col-md-6">
                         <label class="form-label">Teléfono</label>
                         <input type="number" class="form-control" value="<?= $row['telefono'] ?>" disabled>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Tipo</label>
-                        <input type="text" class="form-control" value="<?= htmlspecialchars($row['tipo']) ?>" disabled>
-                    </div>
-
                     <div class="col-md-6">
                         <label class="form-label">Correo</label>
                         <input type="text" class="form-control" value="<?= $row['correo'] ?>" disabled>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Estado</label>
-                        <input type="text" class="form-control" value="<?= $row['estado'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= htmlspecialchars($row['estado']) ?>" disabled>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Código de Barra</label>
-                        <input type="text" class="form-control" value="<?= $row['codigobarra'] ?>" disabled>
+                        <label class="form-label">Grado</label>
+                        <input type="text" class="form-control" value="<?= $row['grado'] ?>" disabled>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Nickname</label>
-                        <input type="text" class="form-control" value="<?= $row['nickname'] ?>" disabled>
+                        <label class="form-label">Carrera</label>
+                        <input type="text" class="form-control" value="<?= $row['carrera'] ?>" disabled>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Contraseña</label>
-                        <input type="text" class="form-control" value="<?= $row['contraseña'] ?>" disabled>
-                    </div>
+                    
+                    
 
                     <div class="col-12 text-center mt-4">
                         <a href="registro.php" class="btn btn-success">
