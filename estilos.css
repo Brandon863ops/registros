@@ -80,3 +80,12 @@ height: 500px;
     margin: 2%;
 height: 1000px;
 }
+/* Mueve el selector 'Entradas por página' al otro lado (derecha) */
+.dataTable-selector {
+    float: right !important;
+}
+
+/* Opcional: para que la info de la tabla quede alineada a la izquierda */
+.dataTable-info {
+    float: left !important;
+}

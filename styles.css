@@ -1,3 +1,20 @@
+/* Invierte el orden del selector y la info */
+.dataTable-top {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Forzar que el selector quede a la derecha */
+.dataTable-selector {
+    order: 2;
+}
+
+/* Forzar que la info quede a la izquierda */
+.dataTable-info {
+    order: 1;
+}
 body {
             margin: 0;
             display: flex;

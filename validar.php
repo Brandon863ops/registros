@@ -3,8 +3,7 @@ session_start();
 
 $usuarios = [
     "admin" => "1234",
-    "juan" => "abc123",
-    "maria" => "clave"
+    
 ];
 
 $usuario = $_POST['usuario'];

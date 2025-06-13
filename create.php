@@ -1,5 +1,13 @@
 <?php
+session_start();
 require "conexion.php";
+
+// Verificar que hay usuario logueado
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+    exit();
+}
+
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $fechanaci = $_POST['fechanaci'];
@@ -10,19 +18,17 @@ $estado = $_POST['estado'];
 $grado = $_POST['grado'];
 $carrera = $_POST['carrera'];
 
+// Usuario que registró
+$usuarioCreador = $_SESSION['usuario'];
 
+// Insertar datos con fecha actual y usuario creador
+$sql = "INSERT INTO estudiantes (nombre, apellido, fechanaci, direccion, telefono, correo, estado, grado, carrera, createAt, createBy)
+        VALUES ('$nombre', '$apellido', '$fechanaci', '$direccion', '$telefono', '$correo', '$estado', '$grado', '$carrera', NOW(), '$usuarioCreador')";
 
-
-//imprimir en pantalla
-//echo "Hola " . $nombre;
-
-$sql = "INSERT INTO estudiantes(nombre, apellido, fechanaci, direccion, correo, estado, telefono, grado, carrera) VALUES ('$nombre', '$apellido', '$fechanaci',
-'$direccion', '$telefono', '$correo', '$estado', '$grado', '$carrera')";
-if($conn ->query($sql)){
+if ($conn->query($sql)) {
     header("Location: registrar.php");
-
-}else{
-
+    exit();
+} else {
+    echo "Error al registrar: " . $conn->error;
 }
-
 ?>

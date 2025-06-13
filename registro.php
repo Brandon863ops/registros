@@ -5,8 +5,7 @@ $respuesta = mysqli_query($conn, $sql);
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,6 +17,9 @@ $respuesta = mysqli_query($conn, $sql);
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Simple DataTables CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -32,7 +34,11 @@ $respuesta = mysqli_query($conn, $sql);
     <div class="container my-4">
         <h2 class="text-center mb-4">Usuarios Registrados</h2>
         <div class="table-responsive shadow rounded">
+<<<<<<< HEAD
          <table class="table table-bordered table-striped table-hover text-center">
+=======
+            <table id="datatablesSimple" class="table table-striped table-hover align-middle">
+>>>>>>> 0a8fd7680e42c99a5c8dc48f0c2d17a37ff8c9b5
                 <thead class="table-primary text-center">
                     <tr>
                         <th scope="col">#</th>
@@ -84,8 +90,36 @@ $respuesta = mysqli_query($conn, $sql);
                     <?php endif; ?>
                 </tbody>
             </table>
-        
-    </div>
+        </div>
         <img class="corner-image" src="assets/img/descarga-removebg-preview.png" alt="..." />
+    </div>
+
+    <!-- Simple DataTables -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', event => {
+        const datatablesSimple = document.getElementById('datatablesSimple');
+        if (datatablesSimple) {
+            new simpleDatatables.DataTable(datatablesSimple, {
+    searchable: false, // Esto quita el cuadro de búsqueda general
+    labels: {
+        perPage: "Entradas por página",
+        noRows: "No se encontraron resultados",
+        info: "Mostrando {start} a {end} de {rows} entradas",
+        loading: "Cargando...",
+        pagination: {
+            previous: "Anterior",
+            next: "Siguiente",
+            navigate: "Ir a la página",
+            page: "Página",
+            showing: "Mostrando",
+            of: "de"
+        }
+    }
+});
+        }
+    });
+    </script>
 </body>
 </html>
