@@ -25,19 +25,21 @@ $respuesta = mysqli_query($conn, $sql);
         <h4>Menú</h4>
         <a href="registrar.php"><i class="fas fa-user-plus me-2"></i>Registrar</a>
         <a href="registro.php"><i class="fas fa-list me-2"></i>Registrados</a>
+                  <a href="notas.php"><i class="fas fa-list me-2"></i>notas</a>
+
     </div>
 
-    <div class="container my-5">
+    <div class="container my-4">
         <h2 class="text-center mb-4">Usuarios Registrados</h2>
         <div class="table-responsive shadow rounded">
-            <table class="table table-striped table-hover align-middle">
+         <table class="table table-bordered table-striped table-hover text-center">
                 <thead class="table-primary text-center">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Grado</th>
                         <th scope="col">Carrera</th>
-                        <th scope="col" style="width: 160px;">Acciones</th>
+                        <th scope="col" style="width: 200px;">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +64,11 @@ $respuesta = mysqli_query($conn, $sql);
                                 </button>
                             </a>
                             <a href="view.php?id=<?php echo $row['id']; ?>" title="Ver Registro">
+                                <button type="button" class="btn btn-outline-success btn-xs">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                            </a>
+                            <a href="notas.php?id=<?php echo $row['id']; ?>" title="Ver notas">
                                 <button type="button" class="btn btn-outline-success btn-xs">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>

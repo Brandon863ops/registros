@@ -102,4 +102,42 @@ body {
             .image-column {
                 display: none;
             }
+
+            .contenedor {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo base para todos los botones */
+.btn {
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #2d3e50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Posiciones independientes para cada botón */
+.boton1 {
+  top: 500px;
+  left: 400px;
+}
+
+.boton2 {
+  top: 120px;
+  left: 200px;
+}
+
+.boton3 {
+  top: 200px;
+  left: 100px;
+}
+
         }

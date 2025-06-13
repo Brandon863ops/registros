@@ -32,7 +32,8 @@ $respuesta = mysqli_query($conn , $sql);
         <h4>Menú</h4>
         <a href="registrar.php"><i class="fas fa-user-plus me-2"></i>Registrar</a>
         <a href="registro.php"><i class="fas fa-list me-2"></i>Registrados</a>
-          <a href="notas.php"><i class="fas fa-list me-2"></i>notas</a>
+                  <a href="notas.php"><i class="fas fa-list me-2"></i>notas</a>
+
     </div>
 
     <!-- Main Content -->
@@ -42,63 +43,45 @@ $respuesta = mysqli_query($conn , $sql);
             <div class="row align-items-center">
                 <!-- Formulario -->
                 <div class="col-md-7">
-                    <h3 class="mb-4 text-primary">Registro de Usuario</h3>
+               <center> <center>   <h3 class="mb-4 text-primary">CURSOS</h3></center> </center>
                     <form class="row g-3" method="POST" action="create.php">
                         <div class="col-md-6">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" required>
+                            <!-- 
+                            <label class="form-label">Matematica</label>
+                            <input type="text" class="form-control" name="Matematica" required>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" name="apellido" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Fecha de nacimiento</label>
-                            <input type="date" class="form-control" name="fechanaci" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Direccion</label>
-                            <input type="text" class="form-control" name="direccion" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" name="telefono" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Correo</label>
-                            <input type="email" class="form-control" name="correo" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Estado</label>
-                            <select class="form-select" name="estado" required>
-                                
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Grado</label>
-                            <input type="text" class="form-control" name="grado" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Carrera</label>
-                            <input type="text" class="form-control" name="carrera" required>
+                            <label class="form-label">Comunicacion y lenguaje</label>
+                            <input type="text" class="form-control" name="Comunicacion_lenguaje" required>
                         </div>
                         
-                        <div class="col-md-6 password-wrapper">
-                            <label class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" name="contraseña" required>
-                            <button type="button" class="toggle-password" onclick="togglePassword()">
-                                <i class="fas fa-eye" id="toggleIcon"></i>
-                            </button>
-                            <br><br>
+                        <div class="col-md-6">
+                            <label class="form-label">Fisica</label>
+                            <input type="text" class="form-control" name="Fisica" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Programacion estructurado</label>
+                            <input type="text" class="form-control" name="Programacion_estructurado" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Estructura de datos</label>
+                            <input type="text" class="form-control" name="Estructura_datos" required>
                         </div>
                         
+                                 
                         <div class="col-12">
                             <button class="btn btn-success" type="submit">Registrar</button>
                         </div>
                     </form>
-                </div>
+                </div>-->
+
+                 <button class="btn btn-primary" type="submit">matematica</button>
+                <a href="listado.php" class="btn btn-secondary ms-2">Fisica</a>
+                <a href="index.php" class="btn btn-secondary ms-2">portada</a>
+
+
+
+
 
                 <div class="col-md-5 text-center image-column">
                     <img class="masthead-avatar mt-4" src="assets/img/images-removebg-preview.png" alt="Preu"
