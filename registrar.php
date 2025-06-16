@@ -21,9 +21,6 @@ $respuesta = mysqli_query($conn , $sql);
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="styles.css">
-
-    
-
 </head>
 
 <body>
@@ -32,7 +29,7 @@ $respuesta = mysqli_query($conn , $sql);
         <h4>Menú</h4>
         <a href="registrar.php"><i class="fas fa-user-plus me-2"></i>Registrar</a>
         <a href="registro.php"><i class="fas fa-list me-2"></i>Registrados</a>
-          <a href="notas.php"><i class="fas fa-list me-2"></i>notas</a>
+        <a href="notas.php"><i class="fas fa-list me-2"></i>Notas</a>
     </div>
 
     <!-- Main Content -->
@@ -42,7 +39,7 @@ $respuesta = mysqli_query($conn , $sql);
             <div class="row align-items-center">
                 <!-- Formulario -->
                 <div class="col-md-7">
-                    <h3 class="mb-4 text-primary">Registro de Usuario</h3>
+                    <h3 class="mb-4 text-primary">Registro de Estudiantes</h3>
                     <form class="row g-3" method="POST" action="create.php">
                         <div class="col-md-6">
                             <label class="form-label">Nombre</label>
@@ -57,7 +54,7 @@ $respuesta = mysqli_query($conn , $sql);
                             <input type="date" class="form-control" name="fechanaci" required>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label">Direccion</label>
+                            <label class="form-label">Dirección</label>
                             <input type="text" class="form-control" name="direccion" required>
                         </div>
                         <div class="col-md-6">
@@ -71,22 +68,31 @@ $respuesta = mysqli_query($conn , $sql);
                         <div class="col-md-6">
                             <label class="form-label">Estado</label>
                             <select class="form-select" name="estado" required>
-                                
                                 <option value="Activo">Activo</option>
                                 <option value="Inactivo">Inactivo</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Grado</label>
-                            <input type="text" class="form-control" name="grado" required>
+                            <select class="form-select" name="grado" required>
+                                <option value="" disabled selected>Seleccione un grado</option>
+                                <option value="1ro">1ro</option>
+                                <option value="2do">2do</option>
+                                <option value="3ro">3ro</option>
+                                <option value="4to">4to</option>
+                                <option value="5to">5to</option>
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Carrera</label>
-                            <input type="text" class="form-control" name="carrera" required>
+                            <select class="form-select" name="carrera" required>
+                                <option value="" disabled selected>Seleccione una carrera</option>
+                                <option value="Ciencias y Letras">Ciencias y Letras</option>
+                                <option value="Computación">Computación</option>
+                                <option value="Perito Contador">Perito Contador</option>
+                                <option value="Bachillerato en Diseño">Bachillerato en Diseño</option>
+                            </select>
                         </div>
-                        
-                        
-                        
                         <div class="col-12">
                             <button class="btn btn-success" type="submit">Registrar</button>
                         </div>
@@ -101,23 +107,22 @@ $respuesta = mysqli_query($conn , $sql);
         </div>
     </div>
 
-    
     <img class="corner-image" src="assets/img/descarga-removebg-preview.png" alt="..." />
 
     <script>
-    function togglePassword() {
-        const passInput = document.getElementById('password');
-        const icon = document.getElementById('toggleIcon');
-        if (passInput.type === "password") {
-            passInput.type = "text";
-            icon.classList.remove("fa-eye");
-            icon.classList.add("fa-eye-slash");
-        } else {    
-            passInput.type = "password";
-            icon.classList.remove("fa-eye-slash");
-            icon.classList.add("fa-eye");
+        function togglePassword() {
+            const passInput = document.getElementById('password');
+            const icon = document.getElementById('toggleIcon');
+            if (passInput.type === "password") {
+                passInput.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passInput.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
         }
-    }
     </script>
 </body>
 

@@ -32,13 +32,13 @@ $respuesta = mysqli_query($conn, $sql);
     </div>
 
     <div class="container my-4">
-        <h2 class="text-center mb-4">Usuarios Registrados</h2>
+        <h2 class="text-center mb-4">Estudiantes Registrados</h2>
         <div class="table-responsive shadow rounded">
-<<<<<<< HEAD
+
          <table class="table table-bordered table-striped table-hover text-center">
-=======
+
             <table id="datatablesSimple" class="table table-striped table-hover align-middle">
->>>>>>> 0a8fd7680e42c99a5c8dc48f0c2d17a37ff8c9b5
+ 
                 <thead class="table-primary text-center">
                     <tr>
                         <th scope="col">#</th>

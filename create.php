@@ -8,15 +8,16 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$fechanaci = $_POST['fechanaci'];
-$direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
-$correo = $_POST['correo'];
-$estado = $_POST['estado'];
-$grado = $_POST['grado'];
-$carrera = $_POST['carrera'];
+// Recibir y sanitizar datos del formulario
+$nombre = $conn->real_escape_string($_POST['nombre']);
+$apellido = $conn->real_escape_string($_POST['apellido']);
+$fechanaci = $conn->real_escape_string($_POST['fechanaci']);
+$direccion = $conn->real_escape_string($_POST['direccion']);
+$telefono = $conn->real_escape_string($_POST['telefono']);
+$correo = $conn->real_escape_string($_POST['correo']);
+$estado = $conn->real_escape_string($_POST['estado']);
+$grado = $conn->real_escape_string($_POST['grado']);
+$carrera = $conn->real_escape_string($_POST['carrera']);
 
 // Usuario que registró
 $usuarioCreador = $_SESSION['usuario'];
@@ -26,7 +27,7 @@ $sql = "INSERT INTO estudiantes (nombre, apellido, fechanaci, direccion, telefon
         VALUES ('$nombre', '$apellido', '$fechanaci', '$direccion', '$telefono', '$correo', '$estado', '$grado', '$carrera', NOW(), '$usuarioCreador')";
 
 if ($conn->query($sql)) {
-    header("Location: registrar.php");
+    header("Location: registrar.php?msg=Alumno registrado correctamente");
     exit();
 } else {
     echo "Error al registrar: " . $conn->error;
