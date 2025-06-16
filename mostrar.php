@@ -1,3 +1,38 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PREU - Sistema de Notas</title>
+
+    <title>PREU - Notas</title>
+
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+    
+
+
+<div class="sidebar">
+    <h4>Menú</h4>
+    <a href="registrar.php"><i class="fas fa-user-plus me-2"></i>Registrar</a>
+    <a href="registro.php"><i class="fas fa-list me-2"></i>Registrados</a>
+    <a href="notas.php"><i class="fas fa-list me-2"></i>notas</a>
+                                                
+</div>
+
 <?php
 // Aseguramos que viene del formulario
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -77,3 +112,14 @@ $cursos = $cursosPorCarrera[$carrera] ?? [];
 
 </body>
 </html>
+
+
+    <img class="corner-image" src="assets/img/descarga-removebg-preview.png" alt="..." />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+
