@@ -22,7 +22,7 @@ $carrera = $_POST['carrera'];
 $usuarioCreador = $_SESSION['usuario'];
 
 // Insertar datos con fecha actual y usuario creador
-$sql = "INSERT INTO estudiantes (nombre, apellido, fechanaci, direccion, telefono, correo, estado, grado, carrera, createAt, createBy)
+$sql = "INSERT INTO estudiantes(nombre, apellido, fechanaci, direccion, telefono, correo, estado, grado, carrera, createAt, createBy)
         VALUES ('$nombre', '$apellido', '$fechanaci', '$direccion', '$telefono', '$correo', '$estado', '$grado', '$carrera', NOW(), '$usuarioCreador')";
 
 if ($conn->query($sql)) {
